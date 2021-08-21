@@ -9,3 +9,7 @@ output "out2" {
 output "out3" {
   value = "manita"
 }
+
+output "out4" {
+  value = "any"
+}
