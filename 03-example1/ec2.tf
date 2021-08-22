@@ -8,8 +8,8 @@ resource "aws_instance" "sample" {
 }
 
 resource "aws_security_group" "allow_ssh" {
-  name = "allow_ssh"
-  description = "allow ssh"
+  name                       = "allow_ssh"
+  description                = "allow_ssh"
 
   ingress {
     description              = "SSH"
@@ -21,8 +21,8 @@ resource "aws_security_group" "allow_ssh" {
 
   egress {
     from_port                = 0
-    to_port                  = 0
-    protocol                 = "-1"
+    to_port                  = 65535
+    protocol                 = "tcp"
     cidr_blocks              = ["0.0.0.0/0"]
   }
 
@@ -32,7 +32,7 @@ resource "aws_security_group" "allow_ssh" {
 }
 
 output "ec2-attributes" {
-  value                      = "aws_instance.sample"
+  value                      = aws_instance.sample
 }
 
 provider "aws" {
