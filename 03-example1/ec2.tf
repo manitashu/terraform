@@ -1,11 +1,11 @@
-//resource "aws_instance" "sample" {
-//  ami                        = "ami-074df373d6bafa625"
-//  instance_type              = "t3.micro"
-//  vpc_security_groups_ids    = [aws_security_group.allow_ssh.id]
-//  tags                       = {
-//    Name                     = "Sample"
-//  }
-//}
+resource "aws_instance" "sample" {
+  ami                        = "ami-074df373d6bafa625"
+  instance_type              = "t3.micro"
+  vpc_security_groups_ids    = [aws_security_group.allow_ssh.id]
+  tags                       = {
+    Name                     = "Sample"
+  }
+}
 
 resource "aws_security_group" "allow_ssh" {
   name = "allow_ssh"
@@ -36,7 +36,7 @@ resource "aws_security_group" "allow_ssh" {
 }
 
 output "ec2-attributes" {
-  value = "aws_security_group.allow_ssh"
+  value = "aws_instance.sample"
 }
 
 provider "aws" {
