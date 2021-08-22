@@ -31,3 +31,34 @@ variable "boolean" {
 output "data-types" {
   value = "String = ${var.string}, Number = ${var.number} , Boolean = ${var.boolean}"
 }
+
+variable "TRAINING" {
+  default = "DevOps"
+}
+
+variable "TRAININGS" {
+  default = [ "Hello" , 100 , true , "World" ]
+}
+
+variable "TRAININGS-DETAILS" {
+  default = {
+    AWS = 6 AM EST
+    Devops = 8 AM EST
+  }
+}
+
+output "TRAINING" {
+  value = "var.training"
+}
+
+output "FIRST-TRAINING" {
+  value = "var.TRAININGS[0]"
+}
+
+output "SECOND-TRAINING" {
+  value = "var.TRAININGS[1]"
+}
+
+output "TRAINING-DETAILS" {
+  value = "AWS TIMING - ${var.TRAININGS-DETAILS["AWS"]}"
+}
