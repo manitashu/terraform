@@ -68,3 +68,15 @@ variable "FRUITS" {}
 output "FRUITS" {
   value = "var.FRUITS"
 }
+
+variable "COUNTRIES" {}
+
+output "COUNTRIES" {
+  value = "var.COUNTRIES"
+}
+
+variable "SEASON" {}
+
+output "SEASON" {
+  value = "var.SEASON"
+}
