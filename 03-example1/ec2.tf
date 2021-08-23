@@ -38,3 +38,5 @@ output "ec2-attributes" {
 provider "aws" {
   region                     = "us-east-1"
 }
+
+
