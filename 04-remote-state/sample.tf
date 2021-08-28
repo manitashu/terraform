@@ -15,6 +15,5 @@ terraform {
     bucket = "terraform-b57-m"
     key    = "sample/terraform.tfstate"
     region = "us-east-1"
-    dynamodb_table = "terraform"
   }
 }
