@@ -14,3 +14,5 @@ resource "aws_spot_instance_request" "cheap_worker" {
   }
 }
 
+
+
