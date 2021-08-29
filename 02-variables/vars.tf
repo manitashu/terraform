@@ -84,5 +84,5 @@
 variable "FRUITS" {}
 
 output "FRUITS" {
-  value = "var.FRUITS"
+  value = var.FRUITS
 }
