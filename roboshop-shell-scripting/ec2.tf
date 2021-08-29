@@ -29,7 +29,7 @@ resource "aws_route53_record" "records" {
   type    = "A"
   zone_id = "Z02450263FK61VP4UUOA9"
   ttl     = 300
-  records = element(aws_spot_instance_request.RoboShop.*.private_ip, count.index)
+  records = [element(aws_spot_instance_request.RoboShop.*.private_ip, count.index)]
 }
 
 //resource "null_resource" "run-shell-scripting" {
