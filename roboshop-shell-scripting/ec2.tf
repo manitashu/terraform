@@ -13,7 +13,7 @@ resource "aws_spot_instance_request" "RoboShop" {
 resource "aws_ec2_tag" "name-tag" {
   count                = length(var.COMPONENTS)
   resource_id          = element(aws_spot_instance_request.RoboShop.*.spot_instance_id, count.index)
-  key                  = "name"
+  key                  = "Name"
   value                = element(var.COMPONENTS, count.index)
 }
 
