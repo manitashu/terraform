@@ -5,6 +5,7 @@ resource "aws_spot_instance_request" "RoboShop" {
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-02b8d5e11fd33834f"]
   wait_for_fulfillment   = true
+//  spot_type              = "persistent"
 
   tags                   = {
     Name                 = element(var.COMPONENTS, count.index)
