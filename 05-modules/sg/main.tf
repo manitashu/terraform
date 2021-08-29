@@ -1,5 +1,5 @@
 module "sg" {
-  source = "../sg"
+  source = "sg.tf"
 }
 
 module "ec2" {
