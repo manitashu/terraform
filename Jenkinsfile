@@ -17,6 +17,12 @@ pipeline {
         }
 
         stage('Terraform Apply') {
+
+            when {
+                environment name: 'ACTION' , value: 'apply'
+                }
+            }
+
             steps {
                 sh '''
                     cd roboshop-shell-scripting
@@ -26,6 +32,11 @@ pipeline {
                 }
 
         stage('Terraform Destroy') {
+
+            when {
+                environment name: 'ACTION' , value: 'destroy'
+            }
+
             steps {
                 sh '''
                     cd roboshop-shell-scripting
