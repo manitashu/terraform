@@ -21,7 +21,6 @@ pipeline {
         }
 
         stage('Terraform Apply') {
-
             when {
                 environment name: 'ACTION' , value: 'apply'
             }
@@ -35,7 +34,6 @@ pipeline {
             }
 
         stage('Terraform Destroy') {
-
             when {
                 environment name: 'ACTION' , value: 'destroy'
             }
