@@ -20,7 +20,6 @@ pipeline {
 
             when {
                 environment name: 'ACTION' , value: 'apply'
-                }
             }
 
             steps {
@@ -28,8 +27,8 @@ pipeline {
                     cd roboshop-shell-scripting
                     terraform apply -auto-approve
                 '''
-                    }
                 }
+            }
 
         stage('Terraform Destroy') {
 
