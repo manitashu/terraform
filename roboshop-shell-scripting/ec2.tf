@@ -35,7 +35,7 @@ resource "aws_route53_record" "records" {
 resource "null_resource" "run-shell-scripting" {
   depends_on                = [aws_route53_record.records]
   count                     = local.LENGTH
-  provisioner "remote-exec" {
+  provisioner "remote-exec"{
     connection {
       host                  = element(aws_spot_instance_request.RoboShop.*.public_ip, count.index)
       user                  = "centos"
