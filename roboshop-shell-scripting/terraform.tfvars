@@ -1,2 +1,1 @@
-#COMPONENTS = ["mysql","mongodb","rabbitmq","redis","cart","shipping","catalogue","user","payment","frontend"]
-COMPONENTS = ["frontend"]
+COMPONENTS = ["mysql","mongodb","rabbitmq","redis","cart","shipping","catalogue","user","payment","frontend"]
