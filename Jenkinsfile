@@ -4,13 +4,13 @@ pipeline {
         node { label 'workstation' }
     }
 
-    options {
-        ansiColor('xterm')
-    }
-
-    parameters {
-        choice(name: 'ACTION', choices: ['apply', 'destroy'], description: 'Pick a terraform action')
-    }
+//     options {
+//         ansiColor('xterm')
+//     }
+//
+//     parameters {
+//         choice(name: 'ACTION', choices: ['apply', 'destroy'], description: 'Pick a terraform action')
+//     }
 
     stages {
 
@@ -20,18 +20,18 @@ pipeline {
             }
         }
 
-        stage('Terraform Apply') {
-            when {
-                environment name: 'ACTION' , value: 'apply'
-            }
-
-            steps {
-                sh '''
-                    cd roboshop-shell-scripting
-                    terraform apply -auto-approve
-                '''
-                }
-            }
+//         stage('Terraform Apply') {
+//             when {
+//                 environment name: 'ACTION' , value: 'apply'
+//             }
+//
+//             steps {
+//                 sh '''
+//                     cd roboshop-shell-scripting
+//                     terraform apply -auto-approve
+//                 '''
+//                 }
+//             }
 
         stage('Terraform Destroy') {
             when {
