@@ -52,7 +52,6 @@ resource "null_resource" "run-shell-scripting" {
   }
 }
 
-
 locals {
   LENGTH = length(var.COMPONENTS)
 }
